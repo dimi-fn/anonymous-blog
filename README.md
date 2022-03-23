@@ -16,7 +16,7 @@ Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](http
 
 | **Where** | **What** |
 |---------------|---------------|
-|  Retrieves all  books|
+| | |
 | || 
 |  |
  ||
