@@ -5,9 +5,9 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-// const postRoutes = require('./routes/posts');
+const postRoutes = require('./routes/posts');
 
-// server.use('/posts', postRoutes);
+server.use('/posts', postRoutes);
 
 server.get('/', (req, res) => res.send('Welcome to the anonymous blog!'));
 
