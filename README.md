@@ -19,7 +19,7 @@ Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](http
 # Description
 
 This project is about constructing a platform where users can submit a post anonymously
-* When a user hits 'publish', the post is then stored in a database
+* When a user hits 'publish', the post is then stored in the database
 (* The user is able to access their post using the ....)
 
 
