@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anonymous Blog</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div contenteditable="true">
+        <form action="./posts.html" method="post">
+            <input placeholder="Title" name="Title"type="text">
+            <br>
+            <input placeholder="By who?" name="name" type="text">
+            <br>
+            <input placeholder="Whats on your mind" name="content" type="text">
+        </form>
+    </div>
+    <aside>
+        <button type="submit">Post</button> <!-- add event listener on click  -->
+    </aside>
 </body>
 </html>
