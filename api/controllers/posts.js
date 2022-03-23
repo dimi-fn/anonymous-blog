@@ -21,12 +21,11 @@ async function show (req, res) {
     }
 };
 
-/* router.post('/', postController.create) // creates post route */
-router.post('/', postRoutes.create); 
+/* router.post('/', postsController.create) // creates posts route */
 async function create (req, res) {
     try {
         const post = await Post.create(req.body);
-        res.status(200).json(post)
+        res.status(201).json(post)
     } catch (err) {
         res.status(422).json({err})
     }
