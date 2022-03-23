@@ -2,7 +2,12 @@ input{
     border-style: none;
 }
 
-aside{
-    position: fixed;
-    left: 50%
+#content{
+    margin: auto;
+    left: 43%;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    border: 5px solid #FFFF00;
 }
+
