@@ -43,7 +43,8 @@ class Post{
             try {
                 const { title, name, post} = postData;
                 let result= await  db.query(`INSERT into posts (title, name, post)    
-                VALUES($1, $2,  $3) RETURNING *; `,[title, name, post]);                
+                VALUES($1, $2,  $3) RETURNING *; `,[title, name, post]);
+                console.log(result)                
                 resolve (result.rows[0]);
             } catch (err) {
                 reject('Post could not be created');
