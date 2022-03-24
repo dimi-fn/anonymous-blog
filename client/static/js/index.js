@@ -50,7 +50,8 @@ async function getAllPosts(){
 }
 
 function appendPosts(data){
-    data.post.forEach(appendPost); // look further into
+    console.log(data)
+    data.posts.forEach(appendPost); // look further into
 };
 
 function appendPost(postData){
