@@ -9,3 +9,4 @@ router.post('/', postRoutes.create); // creates post route
 
 
 module.exports = router;
+
