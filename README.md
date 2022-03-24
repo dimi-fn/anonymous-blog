@@ -12,7 +12,7 @@ Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](http
     * alteratively run: `docker compose down --volumes --remove-orphans` and `docker volume prune --force`
 * To enter the postgreSQL database:
     * first have the docker running based on the commands above
-    * run `docker exec -it anonymous-blog_db_1 psql -U dimi_imman anonymous`
+    * open another terminal and run `docker exec -it anonymous-blog_db_1 psql -U dimi_imman anonymous`
 
 -------
 
