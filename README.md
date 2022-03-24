@@ -5,7 +5,7 @@ Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](http
 # Installation & Usage
 
 * Clone or download the repo
-* From your terminal run `bash startContainer.sh` to run the docker which will install all packages and dependencies
+* Navigate to the root project directory and run `bash startContainer.sh` to run the docker which will install all packages and dependencies
     * alternatively run: `docker-compose up`
 * To shut down the container: `bash stopContainer.sh` or `docker-compose down`
 * To shut down container and also remove all potential new data insterted on the front-end run: `bash teardownContainer.sh`
