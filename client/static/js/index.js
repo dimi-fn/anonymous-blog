@@ -56,6 +56,6 @@ function appendPosts(data){
 function appendPost(postData){
     const newRow = document.createElement('div');
     const postEntry = formatPost(postData, newRow)
-    dogsList.append(newRow);
+    postsArea.append(newRow);
 };
 
