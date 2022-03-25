@@ -47,7 +47,7 @@ class Post{
                 console.log(result)                
                 resolve (result.rows[0]);
             } catch (err) {
-                reject('Post could not be created');
+                reject(`Post could not be created for reason ${err}`);
             }
         });
     };
