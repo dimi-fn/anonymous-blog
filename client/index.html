@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anonymous Blog</title>
     <link rel="stylesheet" href="./static/css/style.css">
-    <script defer src="static/js/index.js"></script>
+    <script type="text/javascript" defer src="static/js/requests.js"></script>
+    <script type="text/javascript" defer src="static/js/layout.js"></script>
 </head>
 <body>
     <div id="content">
+        
+        <!-------------------------- form -------------------------->
         <form id="post_form">
             <input type="text" id="title" name="title" placeholder="Title..." required>
             <br><br><br>
@@ -19,8 +22,14 @@
             
             <input type="text" id="post" name="post" placeholder="What's on your mind...?" maxlength='1000' size='50' " required>
 
-            <input type="submit" value="Add post">
+            <!-- <input type="submit" value="Add post"> -->
+            <!-- <button id="btnSubmitPost" value="Add Post"> -->
+            <button id="btnSubmitPost" class="button">Add Post</button>
+            <br><br>
         </form>
+        <!-------------------------- form -------------------------->
+
+        <button id="homeButton" class="button">Back</button>
     </div>
     <div id="postsArea">
 

@@ -13,3 +13,20 @@ input{
     position: absolute;
     top: 40%;
 }
+
+.button{
+    /* height: 30px;  */
+    border-radius: 30px;
+    background-color:  rgb(187, 166, 166);
+    font-size: 14px;
+}
+
+.button:hover{
+    /* CSS for when hovering over the button*/
+    background-color: rgb(114, 101, 101); 
+}
+
+.button:active{
+    background-color: #9eaca1;
+}
+
