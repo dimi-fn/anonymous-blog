@@ -43,7 +43,7 @@ To enter to the postgreSQL database:
 * first have the docker running based on the commands of the 'server' section
 * open another terminal, navigate to the root project, and run:
     
-    docker exec -it anonymous_blog_dev_db psql -U dimi_imman anonymous
+        docker exec -it anonymous_blog_dev_db psql -U dimi_imman anonymous
 
 * You can execute any sql query based on postgreSQL    
 
