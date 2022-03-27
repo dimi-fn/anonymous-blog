@@ -1,32 +1,16 @@
 version: '3'
 services:
-  server:
+  api:
     image: node:12.18.4
     working_dir: /code
-    ports: 
-      - 3000:3000
-    environment: 
-      - PGUSER=dimi_imman
-      - PGHOST=db
-      - PGPASSWORD=anonymouspass
-      - PGDATABASE=anonymous
-      - PGPORT=5432
-    depends_on:
-      - db
     volumes:
       - type: bind
         source: ./api
         target: /code
-    command: bash -c "npm install && npm start"
 
   db:
-    image: postgres:latest
-    volumes:
-      - "dbdata:/var/lib/postgresql/data"
-      - "./db:/docker-entrypoint-initdb.d/:ro"
+    image: postgres:12.4
     environment: 
-      - POSTGRES_DB=anonymous
       - POSTGRES_USER=dimi_imman
-      - POSTGRES_PASSWORD=anonymouspass
-volumes:
-  dbdata:
+    volumes:
+      - "./db/migrations:/docker-entrypoint-initdb.d/:ro"

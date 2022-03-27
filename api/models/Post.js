@@ -1,5 +1,4 @@
-// const db = require('../init');
-const db = require('../init');
+const db = require('../dbConfig/init');
 
 
 class Post{
