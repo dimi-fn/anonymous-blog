@@ -1,7 +1,3 @@
-const form = document.querySelector('#post_form') // used in submitPost()
-form.addEventListener('submit', submitPost) // used in submitPost()
-
-
 // get all posts
 async function getAllPosts()
 {
@@ -86,8 +82,11 @@ async function submitPost(e)
             {
                 // redirect to the post hash
                 window.location.hash = `#${data.id}`;
-                console.log(window.location.hash);
+                console.log(`"window.location.hash" is: ${window.location.hash}`);
+                console.log(`"window.location.hash.substring(1)" is: ${window.location.hash.substring(1)}`);             
+                console.log("Data from JSON response is:")
                 console.log(data)
+                
             }
         }
         catch (err)
