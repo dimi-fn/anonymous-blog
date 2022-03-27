@@ -4,15 +4,26 @@ Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](http
 
 # Installation & Usage
 
-* Clone or download the repo
-* Navigate to the root project directory and run `bash startContainer.sh` to run the docker which will install all packages and dependencies
+## Server
+
+* Use the project files by cloning (with `git clone`) or by downloading the repo
+* Open terminal and navigate to the root project directory and run `bash startContainer.sh` to run the docker which will install all packages and dependencies
     * alternatively run: `docker-compose up`
-* To shut down the container: `bash stopContainer.sh` or `docker-compose down`
-* To shut down container and also remove all potential new data insterted on the front-end run: `bash teardownContainer.sh`
+* To shut down the container running the server: `bash stopContainer.sh` or `docker-compose down`
+* To shut down the container running the server to stop all running services, to remove containers and remove volumes run: `bash teardownContainer.sh`
     * alteratively run: `docker compose down --volumes --remove-orphans` and `docker volume prune --force`
-* To enter the postgreSQL database:
+
+## Database
+
+To enter to the postgreSQL database:
     * first have the docker running based on the commands above
-    * open another terminal and run `docker exec -it anonymous-blog_db_1 psql -U dimi_imman anonymous`
+    * open another terminal, navigate to the root project and run `docker exec -it anonymous-blog_db_1 psql -U dimi_imman anonymous`
+
+## Client
+
+- Once server is running, open index.html file on browser by:
+    - Navigating to http://localhost:5501/client/ through the browser search bar
+    - Using live server with VS Code: right click anywhere on the index.html and click on 'Open with Live Server (you might need to have installer the live server VS Code extention)    
 
 -------
 
@@ -38,6 +49,10 @@ This project is about constructing a platform where users can submit a post anon
 
 # Technologies
 
+* GitHub
 * Express
 * HTML, CSS, JavaScript
-* Docker container which installs the packages and dependencies, and postgreSQL for the database
+* Docker container
+* PostgreSQL
+
+# Licence
