@@ -55,4 +55,6 @@ This project is about constructing a platform where users can submit a post anon
 * Docker container
 * PostgreSQL
 
-# Licence
+# License
+
+* [License](https://github.com/dimi-fn/anonymous-blog/blob/main/LICENSE)
