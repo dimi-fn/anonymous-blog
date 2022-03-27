@@ -39,7 +39,7 @@ This project is about building a platform where users can submit a post anonymou
 
 ## Database
 
-To enter to the postgreSQL database:
+To enter the postgreSQL database:
 * first have the docker running based on the commands of the 'server' section
 * open another terminal, navigate to the root project, and run:
     
