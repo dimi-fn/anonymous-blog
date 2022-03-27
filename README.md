@@ -21,8 +21,9 @@ Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](http
 This project is about constructing a platform where users can submit a post anonymously
 * When a user hits 'publish', the post is then stored in the database and displayed on the frontend. 
 * The user can create another post by removing the hash extension from the url which defined the show route
-* **To do**: The user is able to access their post using the show route which is in the form of `url#posts/<id>`
-* **To do**: The user can view all other posts based on the post hash, as long as the id of the post exists in the database
+* The user is able to access their post using the show route which is in the form of `/index.html#<id>`
+* The user can view all other posts based on the post hash, as long as the id of the post exists in the database
+    * in case the id is out of range and not included in the database, an alert message is displayed
 
 ---------
 
