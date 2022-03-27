@@ -51,7 +51,7 @@ To enter the postgreSQL database:
 
 * Once server is running, open index.html file on browser by:
     * Navigating to http://localhost:8080 through the browser search bar, or
-    * Using live server with VS Code: right click anywhere on the index.html and click on '*Open with Live Server*' (you might need to have installed the respective live server VS Code extention)    
+    * Using live server with VS Code: Right click on index.html in the client folder and select *Open with Live Server* (you might need to have installed the respective live server VS Code extention)    
 
 ---------------
 
