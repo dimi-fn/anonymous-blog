@@ -4,50 +4,54 @@ Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](http
 
 # Project Decription
 
-Building a similar platform to that of [telegra](https://telegra.ph/)
-
-# Installation & Usage
-
-## Server
-
-* Use the project files by cloning (with `git clone`) or by downloading the repo
-* Open terminal and navigate to the root project directory and run `bash startContainer.sh` to run the docker which will install all packages and dependencies
-    * alternatively run: `docker-compose up`
-* To shut down the container running the server: `bash stopContainer.sh` or `docker-compose down`
-* To shut down the container running the server to stop all running services, to remove containers and remove volumes run: `bash teardownContainer.sh`
-    * alteratively run: `docker compose down --volumes --remove-orphans` and `docker volume prune --force`
-
-## Database
-
-To enter to the postgreSQL database:
-    * first have the docker running based on the commands above
-    * open another terminal, navigate to the root project and run `docker exec -it anonymous-blog_db_1 psql -U dimi_imman anonymous`
-
-## Client
-
-- Once server is running, open index.html file on browser by:
-    - Navigating to http://localhost:5501/client/ through the browser search bar
-    - Using live server with VS Code: right click anywhere on the index.html and click on 'Open with Live Server (you might need to have installer the live server VS Code extention)    
-
--------
-
-# Description
-
-This project is about constructing a platform where users can submit a post anonymously
+This project is about building a platform where users can submit a post anonymously (similar to platforms like [telegra](https://telegra.ph/))
 * When a user hits 'publish', the post is then stored in the database and displayed on the frontend. 
 * The user can create another post by removing the hash extension from the url which defined the show route
 * The user is able to access their post using the show route which is in the form of `/index.html#<id>`
 * The user can view all other posts based on the post hash, as long as the id of the post exists in the database
     * in case the id is out of range and not included in the database, an alert message is displayed
 
----------
+# Installation & Usage
 
-## Endpoints
+## Server
+
+### Endpoints
 
 | **Where** | **What** |
 |---------------|---------------|
 | `http://localhost:3000/posts` | retrieves all posts|
 | `http://localhost:3000/posts/<id>`| retrieves post based on id| 
+
+### Run the Server
+* Use the project files by cloning (with `git clone`) or by downloading the repo files
+* Open a terminal, navigate to the root project directory and run `bash _scripts/startDevContainer.sh` to:
+    * run the docker container which will install all npm packages and dependencies, will seed the database, and will run the server using nodemon
+    * start the api and database services that will run and seed the postgreSQL database
+    * serve the server on port 3000 (http://localhost:3000)
+
+### Stop the server
+
+* In order to just stop the server:
+    * In the same terminal type `ctrl+c`, or
+    * Open another terminal, navigate to the root project directory and run `bash _scripts/stopContainer.sh`
+
+* In order to both stop the server and teardown by removing all running services in containers as well as by removing volumes, run `bash _scripts/tearDown.sh`
+
+## Database
+
+To enter to the postgreSQL database:
+* first have the docker running based on the commands of the 'server' section
+* open another terminal, navigate to the root project, and run:
+    
+    docker exec -it anonymous_blog_dev_db psql -U dimi_imman anonymous
+
+* You can execute any sql query based on postgreSQL    
+
+## Client
+
+* Once server is running, open index.html file on browser by:
+    * Navigating to http://localhost:8080 through the browser search bar, or
+    * Using live server with VS Code: right click anywhere on the index.html and click on '*Open with Live Server*' (you might need to have installed the respective live server VS Code extention)    
 
 ---------------
 
