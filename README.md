@@ -2,6 +2,10 @@
 
 Made by [ImmanuelEgboche](https://github.com/ImmanuelEgboche) and [dimi-fn](https://github.com/dimi-fn)
 
+# Project Decription
+
+Building a similar platform to that of [telegra](https://telegra.ph/)
+
 # Installation & Usage
 
 ## Server
